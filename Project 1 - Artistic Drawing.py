@@ -38,7 +38,7 @@ def drawfire(t, pos):
     reset(t)
     t.goto(x, y)
     size = 20
-    for i in ["yellow", "orange", "red"]:
+    for i in ["yellow", "orange", "red"]: ## repeats the drawing of the flame 3 times, each time slightly smaller to create layers to the flame
         if i == "red":
             t.begin_fill()
         t.down()
@@ -163,7 +163,7 @@ def drawgradient(t): ## draws the background sky gradient for the picture
     s = 1
     v = 1
     for i in range(int(turtle.window_height())):
-        t.color(colorsys.hsv_to_rgb(h, s, v)) ## 
+        t.color(colorsys.hsv_to_rgb(h, s, v)) ## converters from the HSV format to RGB, as HSV values allow for a smoother gradient 
         t.forward(int(turtle.window_width()))
         t.up()
         t.forward((-int(turtle.window_width())))
